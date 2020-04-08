@@ -1,5 +1,4 @@
-1. 
-``` bash npm install ```
+1. ``` npm install ```
 
-2. 
-``` bash npm start ```
+
+2. ``` npm start ```
