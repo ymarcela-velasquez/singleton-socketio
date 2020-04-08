@@ -1,10 +1,9 @@
-const express = require("express");
-const socketio = require("socket.io");
+const express = require("express")
+const socketio = require("socket.io")
 
 const app = express();
 
 const PORT = process.env.PORT || 3001;
-
 app.use(express.static("public"));
 
 app.get("/hello", function(req, res) {
@@ -21,20 +20,19 @@ module.exports = server;
 // var looper = setInterval(function(){
 //     counter++;
 //     console.log("Counter is: " + counter);
-
 //     if (counter >= 5)
 //     {
 //         clearInterval(looper);
 //     }
 // }, 1000);
 
-let instances = [];
+let instances = []
 setInterval(() => {
   // let instance = new WS(server);
-  let instance = require("./ws")(server);
+  let instance = require("./ws")(server)
   if (instance) {
-    instances.push(instance);
+    instances.push(instance)
   }
   // console.log("instance: ", instance)
-  console.log("longitud: ", instances.length);
-}, 5000);
+  console.log("instances: ", instances.length)
+}, 500)

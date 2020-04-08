@@ -12,7 +12,6 @@ class WS {
           author: "",
         },
       ]
-
       console.log('Alguien se ha conectado con Sockets');
       socket.emit('messages', messages);
       socket.on('new-message', function(data) {
@@ -30,4 +29,5 @@ module.exports = (server) => {
     wsInstance = new WS(server)
   }
   return wsInstance
+  // return new WS(server)
 }
